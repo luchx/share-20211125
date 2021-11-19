@@ -225,6 +225,8 @@
               </code>
             </pre>
           </section>
+        </section>
+        <section>
           <section>
             <h3>
               <span class="capitalize text-green-600 mr-8">part 2</span>
@@ -234,6 +236,18 @@
               <small class="mt-40 text-gray-100">时长约20分钟</small>
             </p>
           </section>
+          <section>
+            <img src="@/assets/images/hudini.png" />
+          </section>
+          <section>
+            <img src="@/assets/images/hudini-api.png" />
+          </section>
+        </section>
+        <section>
+          <h3>
+            <span class="capitalize text-green-600 mr-8">part 3</span>
+            <span>Q&A</span>
+          </h3>
         </section>
       </div>
     </div>

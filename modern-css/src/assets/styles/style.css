@@ -19,6 +19,10 @@ a[name], [as-bg] {
   text-shadow: -0.05em -0.05em #ffc5ae66, 0.1em 0.1em #82f6f388;
 }
 
+.reveal .slide-background {
+  background-color: #282a36;
+}
+
 css-doodle {
   --line: (
     :doodle {
