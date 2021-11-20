@@ -3,49 +3,106 @@
     <div class="reveal">
       <div class="slides">
         <section>
-          <h1>现代化 <span class="text-pink-500">CSS</span> 方法论</h1>
+          <h1>现代化 <span class="inline-block transform rotate-12 text-pink-500">css</span> 方法论</h1>
           <p>卢创旭</p>
           <p>- 移动验房-前端 -</p>
         </section>
         <section>
           <h3>
             <span class="capitalize text-green-600 mr-8">part 1</span>
-            <span>CSS 处理器</span>
+            <span>css 模块化</span>
           </h3>
           <p>
-            <small class="mt-40 text-gray-100">时长约10分钟</small>
+            <small class="mt-40 text-gray-100">时长约 5 分钟</small>
           </p>
+        </section>
+        <section>
+          <section>
+            <h3>css 模块化规范</h3>
+            <ul>
+              <li>约定式规范: 
+                <a target="_blank" href="https://zhuanlan.zhihu.com/p/44851489">smacss</a>、
+                <a target="_blank" href="https://en.bem.info">bem</a>、
+                <a target="_blank" href="https://suitcss.github.io">suit</a>、
+                <a target="_blank" href="https://patternlab.io">acss</a>、
+                <a target="_blank" href="https://csswizardry.net/talks/2014/11/itcss-dafed.pdf">itcss</a>
+              </li>
+              <li>工具式规范: css modules、vue-scoped、css in js、js in css</li>
+            </ul>
+          </section>
+          <section>
+            <h3>约定式规范</h3>
+            <div class="text-left">
+              <p>基本思想：</p>
+            <div class="text-2xl">
+              - 通过约定来规范css的命名，以解决命名冲突问题
+              <br>
+              - 通过提供或推荐分层设计好的css代码，来达到样式复用的目的
+            </div>
+            <p>典型实现方式：</p>
+            <ul class="text-2xl">
+              <li>bem：bem 的意思就是块（block）、元素（element）、修饰符（modifier）</li>
+              <li>acss：引入实现 atomic css 思想的 <a href="https://www.tailwindcss.cn" target="_blank">tailwind css</a> 框架</li>
+            </ul>
+            </div>
+          </section>
+          <section>
+            <h3>工具式规范</h3>
+            <div class="text-left">
+              <p>基本思想：</p>
+            <div class="text-2xl">
+              - 编译时将类名替换成全局唯一的带有作用域的类名，来达到模块化 css 局部作用域的效果。
+              <br>
+              - 缺点是需要搭配相关工具实现，有一定的学习成本。
+            </div>
+            <p>典型实现方式：</p>
+            <ul class="text-2xl">
+              <li>css modules：通过 webpack 的 css-loader 中启用 css modules</li>
+              <li>css in js：引入 styled-components 插件</li>
+              <li>js in css：css hudini</li>
+            </ul>
+            </div>
+          </section>
         </section>
         <section>
           <h3>
-            <span class="mb-40">CSS 预处理器</span>
+            <span class="capitalize text-green-600 mr-8">part 2</span>
+            <span>css 处理器</span>
           </h3>
-          <span>
-            <img
-              src="@/assets/images/css.png"
-              style="
-                height: 35vh;
-                margin: 40px auto 4rem auto;
-                background: transparent;
-              "
-            />
-          </span>
-          <p class="text-left text-4xl">
-            “A CSS preprocessor is a program that lets you generate CSS from the
-            preprocessor's own unique syntax.”
-          </p>
-          <p class="text-left text-base">
-            译：CSS预处理器是一个能让你通过预处理器自己独有的语法来生成CSS的程序。
+          <p>
+            <small class="mt-40 text-gray-100">时长约 10 分钟</small>
           </p>
         </section>
         <section>
+          <section>
+            <h3>
+              <span class="mb-40">css 预处理器</span>
+            </h3>
+            <span>
+              <img
+                src="@/assets/images/css.png"
+                style="
+                  height: 35vh;
+                  margin: 40px auto 4rem auto;
+                  background: transparent;
+                "
+              />
+            </span>
+            <p class="text-left text-4xl">
+              “a css preprocessor is a program that lets you generate css from the
+              preprocessor's own unique syntax.”
+            </p>
+            <p class="text-left text-base">
+              译：css预处理器是一个能让你通过预处理器自己独有的语法来生成css的程序。
+            </p>
+          </section>
           <section>
             <h3>预处理器变革</h3>
           </section>
           <section>
             <h4>青铜时代（模板）</h4>
             <pre>
-              <code class="hljs css" style="word-wrap: break-word;">
+              <code class="hljs css">
                 body {
                   left: <%= left %>px;
                   color: <%= color|height: 10% %>px;
@@ -57,22 +114,22 @@
             <h4>特点</h4>
             <p>
               <ul>
-                <li>对 CSS 无感知</li>
+                <li>对 css 无感知</li>
                 <li>错误无法追踪</li>
                 <li>维护困难</li>
               </ul>
             </p>
           </section>
-          <section>
-            <h4>白银时代</h4>
+          <section data-auto-animate>
+            <h4>白银时代（sass）</h4>
             <p class="text-left">
               <small>
-                sass是诞生最早，也是世界上最成熟、最稳定、最强大的专业级CSS扩展语言！
+                sass是诞生最早，也是世界上最成熟、最稳定、最强大的专业级css扩展语言！
               </small>
             </p>
             <pre>
-              <code class="hljs css" style="word-wrap: break-word;">
-                $font-stack: Helvetica, sans-serif
+              <code class="hljs css" data-trim data-line-numbers="|8-11">
+                $font-stack: helvetica, sans-serif
                 $primary-color: #333
 
                 body
@@ -81,13 +138,13 @@
 
                 // 转换后
                 body {
-                  font: 100% Helvetica, sans-serif;
+                  font: 100% helvetica, sans-serif;
                   color: #333;
                 }
               </code>
             </pre>
           </section>
-          <section data-auto-animate>
+          <section>
             <h4>特点</h4>
             <div class="flex items-center">
               <div>
@@ -122,34 +179,34 @@
               <ul>
                 <li>对前端更加友好</li>
                 <li>不基于缩进，不简洁但更安全</li>
-                <li>与自定义DSL同样强大的语言能力</li>
+                <li>与自定义dsl同样强大的语言能力</li>
                 <li>可以直接使用css书写</li>
               </ul>
             </p>
           </section>
-          <section>
+          <section data-auto-animate>
             <h3>预处理器常用规范</h3>
             <ul>
-              <li class="text-red-500">变量</li>
-              <li>混合（Mixin）Extend</li>
-              <li class="text-red-500">嵌套规则</li>
+              <li class="fragment highlight-red">变量</li>
+              <li>混合（mixin）extend</li>
+              <li class="fragment highlight-red">嵌套规则</li>
               <li>运算</li>
-              <li class="text-red-500">函数</li>
-              <li>Namespaces & Accessors</li>
-              <li>Scope</li>
+              <li class="fragment highlight-red">函数</li>
+              <li>namespaces & accessors</li>
+              <li>scope</li>
               <li>注释</li>
             </ul>
           </section>
         </section>
         <section>
           <section>
-            <h3>CSS后处理器</h3>
+            <h3>css后处理器</h3>
             <ul>
-              <li>CSS压缩 CLEAN-CSS</li>
-              <li>自动添加浏览器前缀 Autoprefixer</li>
-              <li>CSS更加美观排序 CSScomb</li>
-              <li>Rework取代Stylus 后处理器发热</li>
-              <li>前后通吃 PostCSS</li>
+              <li>css压缩 clean-css</li>
+              <li>自动添加浏览器前缀 autoprefixer</li>
+              <li>css更加美观排序 csscomb</li>
+              <li>rework取代stylus 后处理器发热</li>
+              <li>前后通吃 postcss</li>
             </ul>
           </section>
           <section>
@@ -159,10 +216,9 @@
             <img src="@/assets/images/ast.png" />
           </section>
           <section>
+            <h3>postcss</h3>
+            <p>css 界的 babel</p>
             <img src="@/assets/images/post.png" />
-            <a href="https://csstools.github.io/postcss-preset-env">
-              postcss-preset-env
-            </a>
           </section>
           <section>
             <h3>安装使用</h3>
@@ -170,38 +226,35 @@
           <section>
             <h3>vue-cli</h3>
             <p class="text-lg">
-              由于 vue-cli 脚手架默认使用 postcss，所以我们只需安装 postcss-import postcss-preset-env
+              由于 vue-cli 脚手架默认使用 postcss@7，所以我们只需安装 postcss-import@12.0.0 postcss-preset-env@6.5.0
             </p>
             <pre>
-                <code class="hljs bash" style="word-wrap: break-word;">
-                  # postcss-import 用于支持 @import 引入 css
+                <code class="hljs bash">
+    # postcss-import 用于支持 @import 引入 css
+    # postcss-preset-env 用于支持 css-next 特性
 
-                  # postcss-preset-env 用于支持 css-next 特性
-
-                  npm install -D postcss-import postcss-preset-env
+    npm install -d postcss-import@12.0.0 postcss-preset-env@6.5.0
                 </code>
               </pre>
           </section>
-          <section>
+          <section data-auto-animate>
             <h3>webpack</h3>
             <pre>
-              <code class="hljs bash" style="word-wrap: break-word;">
-                npm install -D css-loader 
-                  style-loader postcss postcss-loader 
-                  postcss-import postcss-preset-env
+              <code class="hljs">
+    npm install -d css-loader style-loader postcss postcss-loader postcss-import postcss-preset-env
               </code>
             </pre>
             <pre data-id="code-animation">
-              <code class="hljs js" style="word-wrap: break-word;">
+              <code class="hljs js" data-trim data-line-numbers="|13-21">
                 // 然后在 webpack 配置中添加
                 const path = require("path");
-                const HtmlWebpackPlugin = require("html-webpack-plugin");
+                const htmlwebpackplugin = require("html-webpack-plugin");
 
                 const resolve = (dir) => path.join(__dirname, dir);
 
                 module.exports = {
                   mode: "development",
-                  devServer: {
+                  devserver: {
                     port: 3000,
                   },
                   module: {
@@ -217,7 +270,7 @@
                     ],
                   },
                   plugins: [
-                    new HtmlWebpackPlugin({
+                    new htmlwebpackplugin({
                       template: resolve("index.html"),
                     }),
                   ],
@@ -225,15 +278,54 @@
               </code>
             </pre>
           </section>
+          <section data-auto-animate>
+            <h3>配置文件</h3>
+            <p>在根目录新建 .postcssrc.js 文件</p>
+            <pre>
+              <code class="hljs js" data-trim data-line-numbers="|3-9">
+                module.exports = {
+                  plugins: {
+                    "postcss-import": {},
+                    "postcss-preset-env": {
+                      stage: 3,
+                      features: {}
+                    },
+                  },
+                };
+
+              </code>
+            </pre>
+            <p class="text-left">
+              - <a href="https://github.com/csstools/postcss-preset-env/blob/main/src/lib/plugins-by-id.js#l36" target="_blank">
+                  postcss-preset-env
+                </a>
+                <br>
+              - <a href="https://postcss.docschina.org/doc/plugins.html" target="_blank">
+                  postcss plugins
+                </a>
+            </p>
+          </section>
+          <section>
+            <h3>postcss值得收藏的插件</h3>
+            <ul>
+              <li><span class="text-green-600">postcss-custom-properties</span> 运行时变量</li>
+              <li><span class="text-green-600">postcss-utilities</span> 包含常用mixins、shortcuts、helpers的工具集</li>
+              <li><span class="text-green-600">postcss-simple-vars</span> 与scss一致的变量实现</li>
+              <li><span class="text-green-600">postcss-mixins</span> 实现类似sass的@mixin的功能</li>
+              <li><span class="text-green-600">postcss-extend</span> 实现类似sass的继承功能</li>
+              <li><span class="text-green-600">postcss-import</span> 实现类似sass的import</li>
+              <li><span class="text-green-600">postcss-preset-env</span> 面向未来语法</li>
+            </ul>
+          </section>
         </section>
         <section>
           <section>
             <h3>
-              <span class="capitalize text-green-600 mr-8">part 2</span>
-              <span>CSS 魔术师Houdini</span>
+              <span class="capitalize text-green-600 mr-8">part 3</span>
+              <span>css 魔术师houdini</span>
             </h3>
             <p>
-              <small class="mt-40 text-gray-100">时长约20分钟</small>
+              <small class="mt-40 text-gray-100">时长约 20 分钟</small>
             </p>
           </section>
           <section>
@@ -245,8 +337,8 @@
         </section>
         <section>
           <h3>
-            <span class="capitalize text-green-600 mr-8">part 3</span>
-            <span>Q&A</span>
+            <span class="capitalize text-green-600 mr-8">part 4</span>
+            <span>q&a</span>
           </h3>
         </section>
       </div>
@@ -255,19 +347,19 @@
 </template>
 
 <script>
-import Reveal from "reveal.js";
-import RevealMarkdown from "reveal.js/plugin/markdown/markdown.esm";
-import RevealHighlight from "reveal.js/plugin/highlight/highlight.esm.js";
-import RevealNotes from "reveal.js/plugin/notes/notes.esm.js";
+import reveal from "reveal.js";
+import revealmarkdown from "reveal.js/plugin/markdown/markdown.esm";
+import revealhighlight from "reveal.js/plugin/highlight/highlight.esm.js";
+import revealnotes from "reveal.js/plugin/notes/notes.esm.js";
 
 export default {
-  name: "App",
+  name: "app",
   mounted() {
-    Reveal.initialize({
+    reveal.initialize({
       hash: true,
-      mouseWheel: true,
-      // Learn about plugins: https://revealjs.com/plugins/
-      plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      mousewheel: true,
+      // learn about plugins: https://revealjs.com/plugins/
+      plugins: [revealmarkdown, revealhighlight, revealnotes],
     });
   },
 };
@@ -280,7 +372,7 @@ export default {
   height: 100vh;
   width: 100vw;
   & section {
-    font-family: Georgia, "Hiragino Sans GB", serif;
+    font-family: georgia, "hiragino sans gb", serif;
   }
 }
 
