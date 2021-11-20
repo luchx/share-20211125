@@ -371,12 +371,43 @@
           <section>
             <img src="@/assets/images/hudini-api.png" />
           </section>
+          <section>
+            <h3 style="text-transform: unset">Houdini APIs</h3>
+            <p class="text-left text-2xl">
+              “CSS Houdini是一组底层API，它们公开了CSS引擎的各个部分，从而使开发者可以通过这组API来扩展CSS。它让开发者拥有了直接访问CSSOM的能力，开发者可以通过这组API来编写浏览器可解析的CSS代码，这让开发者可以在不需要等待浏览器的实现的前提下实现自己想要的CSS功能。”
+            </p>
+            <ul>
+              <li>Typed OM API</li>
+              <li>Properties & Values API</li> 
+              <li>Paint API</li> 
+              <li>Layout API</li> 
+              <li>Animation worklet</li> 
+              <li>Parser API</li> 
+              <li>Font Metrics API</li> 
+            </ul>
+          </section>
+          <section data-background-iframe="https://ishoudinireadyyet.com" data-background="#ffffff" data-background-interactive>
+          </section>
         </section>
         <section>
           <h3>
             <span class="capitalize text-green-600 mr-8">part 4</span>
             <span>Q&A</span>
           </h3>
+          <div class="text-left text-base mt-40">
+            <p class="text-2xl">资料来源：</p>
+            <ul>
+              <li>https://blog.techbridge.cc/2017/05/23/css-houdini</li>
+              <li>https://mp.weixin.qq.com/s/Zqw8f5jX6MmeURRzc44C6Q</li>
+              <li>https://www.cnblogs.com/cyn941105/p/5590239.html</li>
+              <li>https://yuanchuan.dev/talk/generative-art-with-css</li>
+              <li>https://www.qed42.com/insights/coe/javascript/building-powerful-custom-properties-css-houdini</li>
+              <li>https://csstools.github.io/postcss-preset-env</li>
+              <li>https://zhuanlan.zhihu.com/p/141725118</li>
+              <li>https://www.postcss.com.cn/</li>
+              <li>https://css-doodle.com</li>
+            </ul>
+          </div>
         </section>
       </div>
     </div>
