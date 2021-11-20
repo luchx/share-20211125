@@ -21,11 +21,11 @@
             <h3>css 模块化规范</h3>
             <ul>
               <li>约定式规范: 
-                <a target="_blank" href="https://zhuanlan.zhihu.com/p/44851489">smacss</a>、
-                <a target="_blank" href="https://en.bem.info">bem</a>、
-                <a target="_blank" href="https://suitcss.github.io">suit</a>、
-                <a target="_blank" href="https://patternlab.io">acss</a>、
-                <a target="_blank" href="https://csswizardry.net/talks/2014/11/itcss-dafed.pdf">itcss</a>
+                <a target="_blank" href="https://zhuanlan.zhihu.com/p/44851489">SMACSS</a>、
+                <a target="_blank" href="https://en.bem.info">BEM</a>、
+                <a target="_blank" href="https://suitcss.github.io">SUIT</a>、
+                <a target="_blank" href="https://patternlab.io">ACSS</a>、
+                <a target="_blank" href="https://csswizardry.net/talks/2014/11/itcss-dafed.pdf">ITCSS</a>
               </li>
               <li>工具式规范: css modules、vue-scoped、css in js、js in css</li>
             </ul>
@@ -41,8 +41,8 @@
             </div>
             <p>典型实现方式：</p>
             <ul class="text-2xl">
-              <li>bem：bem 的意思就是块（block）、元素（element）、修饰符（modifier）</li>
-              <li>acss：引入实现 atomic css 思想的 <a href="https://www.tailwindcss.cn" target="_blank">tailwind css</a> 框架</li>
+              <li>BEM：BEM 的意思就是块（block）、元素（element）、修饰符（modifier）</li>
+              <li>ACSS：引入实现 ATOMIC CSS 思想的 <a href="https://www.tailwindcss.cn" target="_blank">tailwind css</a> 框架</li>
             </ul>
             </div>
           </section>
@@ -70,7 +70,7 @@
             <span>css 处理器</span>
           </h3>
           <p>
-            <small class="mt-40 text-gray-100">时长约 10 分钟</small>
+            <small class="mt-40 text-gray-100">时长约 15 分钟</small>
           </p>
         </section>
         <section>
@@ -179,7 +179,7 @@
               <ul>
                 <li>对前端更加友好</li>
                 <li>不基于缩进，不简洁但更安全</li>
-                <li>与自定义dsl同样强大的语言能力</li>
+                <li>与自定义DSL同样强大的语言能力</li>
                 <li>可以直接使用css书写</li>
               </ul>
             </p>
@@ -319,14 +319,51 @@
           </section>
         </section>
         <section>
+          <h3>
+            <span class="capitalize text-green-600 mr-8">part 3</span>
+            <span>css 艺术</span>
+          </h3>
+          <p>
+            <small class="mt-40 text-gray-100">时长约 20 分钟</small>
+          </p>
+        </section>
+        <section>
           <section>
-            <h3>
-              <span class="capitalize text-green-600 mr-8">part 3</span>
-              <span>css 魔术师houdini</span>
-            </h3>
+            <h3>css-doodle</h3>
             <p>
-              <small class="mt-40 text-gray-100">时长约 20 分钟</small>
+              <a href="https://css-doodle.com">https://css-doodle.com</a>
             </p>
+            <p class="text-center text-4xl">
+              “A web component for drawing patterns with CSS.”
+            </p>
+            <div class="text-center text-base mb-24">
+              译：一个用来绘制CSS图案的WEB组件。
+            </div>
+            <pre>
+              <code class="hljs bash">
+                npm install css-doodle
+
+                /* import it */
+                import 'css-doodle';
+              </code>
+            </pre>
+          </section>
+          <section>
+            <css-doodle-demo1 />
+          </section>
+          <section>
+            <css-doodle-demo2 />
+          </section>
+          <section>
+            <css-doodle-demo3 />
+          </section>
+          <section>
+            <css-doodle-demo4 />
+          </section>
+        </section>
+        <section>
+          <section>
+            <h3 style="text-transform: unset">CSS Houdini</h3>
           </section>
           <section>
             <img src="@/assets/images/hudini.png" />
@@ -338,7 +375,7 @@
         <section>
           <h3>
             <span class="capitalize text-green-600 mr-8">part 4</span>
-            <span>q&a</span>
+            <span>Q&A</span>
           </h3>
         </section>
       </div>
@@ -376,7 +413,7 @@ export default {
   }
 }
 
-.playground .doodle,
+/* .playground .doodle,
 .playground .source {
   display: flex;
   align-items: center;
@@ -388,5 +425,5 @@ export default {
   position: relative;
   overflow: hidden;
   -webkit-tap-highlight-color: transparent;
-}
+} */
 </style>

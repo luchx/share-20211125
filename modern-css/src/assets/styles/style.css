@@ -23,26 +23,20 @@ a[name], [as-bg] {
   background-color: #282a36;
 }
 
-css-doodle {
-  --line: (
-    :doodle {
-      @grid: 14 / 100%;
-      @random {
-        border-left: 1px solid #5d81bc;
-      }
-      @random {
-        border-top: 1px solid #5d81bc;
-      }
-      @random(.25) {
-        background: linear-gradient(
-          @p(#fff, tan, #5d81bc), @lp
-        )
-        50% / @r(60%) @lr
-        no-repeat;
-      }
-      @random {
-        filter: drop-shadow(0 0 10px #fff);
-      }
-    }
-  );
+.CodeMirror pre {
+  font-size: 2rem;
+  box-shadow: unset;
+}
+
+.box-container {
+  display: flex;
+  align-items: center;
+  max-width: 900px;
+}
+.box-content,
+.box-source {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 600px;
 }
