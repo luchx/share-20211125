@@ -321,7 +321,7 @@
         <section>
           <h3>
             <span class="capitalize text-green-600 mr-8">part 3</span>
-            <span>css 艺术</span>
+            <span>css 魔法</span>
           </h3>
           <p>
             <small class="mt-40 text-gray-100">时长约 20 分钟</small>
@@ -389,6 +389,30 @@
               <li>Font Metrics API</li> 
             </ul>
           </section>
+          <section>
+            <h3 style="text-transform: unset">CSS Parser API</h3>
+            <p class="text-left text-2xl mb-24">
+              CSS Parser API 还没有被写⼊规范，所以下⾯我要说的内容随时都会有变化，但是它的基本思想不会变：允许开发者⾃由扩展 CSS 词法分析器，引⼊新的结构（constructs），⽐如新的媒体规则、新的伪类、嵌套、 @extends 、@apply 等等。
+            </p>
+            <p class="text-left text-2xl">
+              只要新的词法分析器知道如何解析这些新结构，CSSOM 就不会直接忽略它们，⽽是把这些结构放到正确的地⽅。
+            </p>
+          </section>
+          <section>
+            <h3 style="text-transform: unset">CSS Layout API</h3>
+            <p class="text-left text-2xl mb-24">
+              CSS Layout API允许开发者可以通过 CSS Layout API 实现⾃⼰的布局模块（layout module），这⾥的 “ 布局模块 ” 指的是display 的属性值。也就是说，这个 API 实现以后，开发者⾸次拥有了像 CSS 原⽣代码（⽐如display:flex 、display:table）那样的布局能⼒。
+            </p>
+          </section>
+          <section>
+            <h3 style="text-transform: unset">CSS Paint API</h3>
+            <p class="text-left text-2xl mb-24">
+              CSS Paint API Layout API ⾮常相似。它提供了⼀个 registerPaint ⽅法，操作⽅式和registerLayout ⽅法也很相似。当想要构建⼀个CSS 图像的时候，开发者随时可以调⽤paint() 函数，也可以使⽤刚刚注册好的名字。
+            </p>
+          </section>
+          <section>
+            <h3 style="text-transform: unset">Worklets实战</h3>
+          </section>
           <section data-background-iframe="https://ishoudinireadyyet.com" data-background="#ffffff" data-background-interactive>
           </section>
         </section>
@@ -405,6 +429,7 @@
               <li>https://www.cnblogs.com/cyn941105/p/5590239.html</li>
               <li>https://yuanchuan.dev/talk/generative-art-with-css</li>
               <li>https://www.qed42.com/insights/coe/javascript/building-powerful-custom-properties-css-houdini</li>
+              <li>https://github.com/GoogleChromeLabs/houdini-samples</li>
               <li>https://csstools.github.io/postcss-preset-env</li>
               <li>https://zhuanlan.zhihu.com/p/141725118</li>
               <li>https://www.postcss.com.cn/</li>

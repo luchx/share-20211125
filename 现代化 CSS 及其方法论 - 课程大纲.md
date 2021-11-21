@@ -17,7 +17,7 @@ part 4: Q&A
 1. css 预处理器
 2. css 后处理器
 
-### 模块三、css 艺术（时长：20 分钟）
+### 模块三、css 魔法（时长：20 分钟）
 
 1. css-doodle
 2. css-hudini
@@ -35,6 +35,8 @@ part 4: Q&A
 - <https://yuanchuan.dev/talk/generative-art-with-css>
 
 - <https://www.qed42.com/insights/coe/javascript/building-powerful-custom-properties-css-houdini>
+
+- <https://github.com/GoogleChromeLabs/houdini-samples>
 
 - <https://csstools.github.io/postcss-preset-env>
 
