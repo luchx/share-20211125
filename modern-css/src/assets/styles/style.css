@@ -24,19 +24,27 @@ a[name], [as-bg] {
 }
 
 .CodeMirror pre {
-  font-size: 2rem;
+  font-size: 1.5rem;
   box-shadow: unset;
 }
 
 .box-container {
   display: flex;
   align-items: center;
-  max-width: 900px;
+  max-width: 80vw;
 }
 .box-content,
 .box-source {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 600px;
+  padding: 2rem;
+}
+
+.box-content {
+  width: 500px;
+}
+
+.box-source {
+  flex: 1;
 }

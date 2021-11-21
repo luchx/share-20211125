@@ -360,6 +360,9 @@
           <section>
             <css-doodle-demo4 />
           </section>
+          <section>
+            <css-doodle-demo5 />
+          </section>
         </section>
         <section>
           <section>

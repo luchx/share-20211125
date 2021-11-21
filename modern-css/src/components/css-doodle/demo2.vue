@@ -1,35 +1,28 @@
 <template>
   <div class="box-container">
     <div class="box-content">
-      <css-doodle click-to-update>
-        :doodle {
-          @grid: 1x50 / 50vmin;
-          overflow: hidden;
-          grid-auto-flow: dense;
-          grid-auto-rows: 1vmin;
-          grid-template-columns: repeat(auto-fill, 1vmin);
-          border: 1px solid #fff;
-        }
-        :container {
-          transform: scale(1.2);
-        }
-
-        margin: -.5px;
-        grid-row-end: span @ri(2, 12);
-        grid-column-end: span @ri(2, 12);
-        border: 1px solid #fff;
-      </css-doodle>
+      <css-doodle click-to-update></css-doodle>
     </div>
-    <pre class="box-source" textarea code>
+    <pre class="box-source" textarea code live>
       :doodle {
-        @grid: 1x50 / 50vmin;
+        @grid: 50x1 / 40vmin;
+        overflow: hidden;
         grid-auto-flow: dense;
-        /* ... */
+        grid-auto-rows: 1vmin;
+        grid-template-columns: 
+          repeat(auto-fill, 1vmin);
+      }
+      :container {
+        transform: scale(1.2);
       }
 
+      margin: -.5px;
       grid-row-end: span @ri(2, 12);
-
       grid-column-end: span @ri(2, 12);
+      border: calc(@i/@I*2px) solid @p(
+        transparent,
+        #FF1489, #FF5A59, #509DA6
+      );
     </pre>
   </div>
 </template>

@@ -5,7 +5,7 @@
     </div>
     <pre class="box-source" textarea code live>
       :doodle {
-        @grid: 19 / 55vmin;
+        @grid: 15 / 40vmin;
       }
 
       --s: 1vmin solid #fff;

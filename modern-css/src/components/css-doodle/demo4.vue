@@ -3,7 +3,7 @@
     <div class="box-content">
       <css-doodle click-to-update>
         :doodle {
-          @grid: 1x50 / 50vmin;
+          @grid: 1x50 / 40vmin;
           overflow: hidden;
           grid-auto-rows: 1vmin;
           grid-template-columns: repeat(auto-fill, 1vmin);
