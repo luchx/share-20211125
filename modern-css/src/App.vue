@@ -414,6 +414,7 @@
             <h3 style="text-transform: unset">Worklets实战</h3>
           </section>
           <section data-background-color="#ffffff" :data-background-image="require('@/assets/images/hudini-ready.png')" data-background-size="contain">
+            <a href="https://ishoudinireadyyet.com" target="_blank" style="position: fixed; top: 0; display: block;width: 100%; height: 100px; color:#f00"></a>
           </section>
         </section>
         <section>
