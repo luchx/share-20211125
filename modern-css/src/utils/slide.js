@@ -65,10 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let result = input.split('\n').map(n => (
       n.replace(new RegExp(`^\\s{${len}}`, 'g'), '')
     ));
-    console.log({
-      input,
-      result
-    });
+
     return result.join('\n');
   }
 

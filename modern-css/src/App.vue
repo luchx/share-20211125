@@ -413,7 +413,7 @@
           <section>
             <h3 style="text-transform: unset">Worklets实战</h3>
           </section>
-          <section data-background-iframe="https://ishoudinireadyyet.com" data-background="#ffffff" data-background-interactive>
+          <section data-background-color="#ffffff" :data-background-image="require('@/assets/images/hudini-ready.png')" data-background-size="contain">
           </section>
         </section>
         <section>
