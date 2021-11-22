@@ -374,6 +374,7 @@
           </section>
           <section>
             <img src="@/assets/images/hudini.png" />
+            <p class="text-base">图片来源: https://www.w3cplus.com/css/css-houdini.html</p>
           </section>
           <section>
             <img src="@/assets/images/hudini-api.png" />
@@ -392,6 +393,51 @@
               <li>Parser API</li> 
               <li>Font Metrics API</li> 
             </ul>
+          </section>
+          <section>
+            <h3 style="text-transform: unset">Typed OM API</h3>
+            <p class="text-left text-2xl mb-24">
+              解决⽬前模型的⼀些问题，并实现 CSS Parsing API 和 CSS 属性与值 API 相关的特性。
+            </p>
+            <pre>
+              <code class="hljs js">
+    // CSSOM
+    // 手动拼接字符串和各种奇怪错误的日子已经结束了！
+    // document.body.style.opacity += 0.1 // 0.1 => 0.10.1
+    var width = 100;
+    document.body.style.width = width + 'px';
+
+    // Typed OM
+    document.body.attributeStyleMap.set('width', '100px');
+    // OR
+    document.body.attributeStyleMap.set('width', CSS.px(100));
+    // document.body.attributeStyleMap.get('width');
+    // document.body.attributeStyleMap.delete('width');
+    // document.body.attributeStyleMap.clear();
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h3 style="text-transform: unset">Properties & Values API</h3>
+            <p class="text-left text-2xl mb-24">
+              解决⽬前模型的⼀些问题，并实现 CSS Parsing API 和 CSS 属性与值 API 相关的特性。
+            </p>
+            <pre>
+              <code class="hljs js">
+    // 注册属性值
+    window.CSS.registerProperty({
+      name: '--my-color',
+      syntax: '&ltcolor&gt',
+      inherits: false,
+      initialValue: '#000',
+    });
+
+    // 取消注册
+    window.CSS.unregisterProperty(
+      '--my-color'
+    )
+              </code>
+            </pre>
           </section>
           <section>
             <h3 style="text-transform: unset">CSS Parser API</h3>
