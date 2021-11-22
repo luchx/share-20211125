@@ -244,8 +244,8 @@
             <h3>webpack</h3>
             <pre>
               <code class="hljs">
-    npm install -d css-loader style-loader postcss 
-      postcss-loader postcss-import postcss-preset-env
+    npm install -D css-loader style-loader postcss 
+                   postcss-loader postcss-import postcss-preset-env
               </code>
             </pre>
             <pre data-id="code-animation">
