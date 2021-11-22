@@ -222,6 +222,9 @@
           </section>
           <section>
             <h3>安装使用</h3>
+            <p>
+              <a href="https://cssnext.github.io/" target="_blank">Tomorrow’s CSS syntax</a>
+            </p>
           </section>
           <section>
             <h3>vue-cli</h3>
