@@ -22,12 +22,18 @@
     <!-- <button id="unregistered">Background Not Registered</button> -->
   </div>
   <script>
+    /**
+     * name ：css 变量名
+     * syntax ：css type 类型，全部可取值见 CSS data types 下的 Properties
+     * inherits ：是否可继承
+     * initialValue ：变量的初始值
+    */
     document.getElementById('registered').addEventListener('click', function () {
       window.CSS.registerProperty({
         name: '--my-color',
         syntax: '<color>',
         inherits: false,
-        initialValue: 'red',
+        initialValue: '#ff0000',
       });
     })
 

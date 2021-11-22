@@ -424,18 +424,18 @@
             </p>
             <pre>
               <code class="hljs js">
-    // 注册属性值
+    /**
+     * name ：css 变量名
+     * syntax ：css type 类型，全部可取值见 CSS data types 下的 Properties
+     * inherits ：是否可继承
+     * initialValue ：变量的初始值
+    */
     window.CSS.registerProperty({
       name: '--my-color',
       syntax: '&ltcolor&gt',
       inherits: false,
       initialValue: '#000',
     });
-
-    // 取消注册
-    window.CSS.unregisterProperty(
-      '--my-color'
-    )
               </code>
             </pre>
           </section>
@@ -453,12 +453,22 @@
             <p class="text-left text-2xl mb-24">
               CSS Layout API允许开发者可以通过 CSS Layout API 实现⾃⼰的布局模块（layout module），这⾥的 “ 布局模块 ” 指的是display 的属性值。也就是说，这个 API 实现以后，开发者⾸次拥有了像 CSS 原⽣代码（⽐如display:flex 、display:table）那样的布局能⼒。
             </p>
+            <pre>
+              <code class="hljs js">
+                CSS.layoutWorklet.addModule('./xxx.js');
+              </code>
+            </pre>
           </section>
           <section>
             <h3 style="text-transform: unset">CSS Paint API</h3>
             <p class="text-left text-2xl mb-24">
-              CSS Paint API Layout API ⾮常相似。它提供了⼀个 registerPaint ⽅法，操作⽅式和registerLayout ⽅法也很相似。当想要构建⼀个CSS 图像的时候，开发者随时可以调⽤paint() 函数，也可以使⽤刚刚注册好的名字。
+              CSS Paint API 和 Layout API ⾮常相似。它提供了⼀个 registerPaint ⽅法，操作⽅式和registerLayout ⽅法也很相似。当想要构建⼀个CSS 图像的时候，开发者随时可以调⽤paint() 函数，也可以使⽤刚刚注册好的名字。
             </p>
+            <pre>
+              <code class="hljs js">
+                CSS.paintWorklet.addModule('./xxx.js');
+              </code>
+            </pre>
           </section>
           <section>
             <h3 style="text-transform: unset">Worklets实战</h3>
