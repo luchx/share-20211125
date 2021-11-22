@@ -16,7 +16,7 @@
         margin: -.5px;
         grid-row-end: span @ri(2, 12);
         grid-column-end: span @ri(2, 12);
-        border: 1px solid #fff;
+        border: 1px solid #f00;
 
         :after {
           position: absolute;

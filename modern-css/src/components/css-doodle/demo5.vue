@@ -1,7 +1,7 @@
 <template>
   <div class="box-container">
     <div class="box-content">
-      <css-doodle click-to-update></css-doodle>
+      <css-doodle></css-doodle>
     </div>
     <pre class="box-source" textarea code live>
       :doodle{
