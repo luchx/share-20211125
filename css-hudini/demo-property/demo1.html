@@ -7,17 +7,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>demo-property</title>
   <style type="text/css">
+    @property --demo-color {
+      syntax: '<color>';
+      inherits: false;
+      initial-value: #c0ffee;
+    }
     body {
       width: 100vw;
       height: 100vh;
-      /* --my-color: #ff0000; */
-      background-color: var(--my-color)
+      /* --demo-color: #ff0000; */
+      background-color: var(--demo-color)
     }
   </style>
 </head>
 
 <body>
-  <div>
+  <div class="el">
     <button id="registered">Background Registered</button>
     <!-- <button id="unregistered">Background Not Registered</button> -->
   </div>
@@ -30,7 +35,7 @@
     */
     document.getElementById('registered').addEventListener('click', function () {
       window.CSS.registerProperty({
-        name: '--my-color',
+        name: '--demo-color',
         syntax: '<color>',
         inherits: false,
         initialValue: '#ff0000',
@@ -38,8 +43,8 @@
     })
 
     // document.getElementById('unregistered').addEventListener('click', function () {
-    //   window.CSS.unRegisterProperty(
-    //     '--my-color'
+    //   window.CSS.unregisterProperty(
+    //     '--demo-color'
     //   )
     // })
   </script>

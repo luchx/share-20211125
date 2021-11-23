@@ -1,9 +1,20 @@
 <template>
   <div class="box-container">
     <div class="box-content">
-      <css-doodle></css-doodle>
+      <css-doodle click-to-update>
+        :doodle {
+          @grid: 5 / 40vmin;
+        }
+
+        border-width: 1px;
+        border-style: solid;
+        border-color: hsla(
+          calc(100 + 20 * @i), 70%, 68%, @r.8
+        );
+        margin: -.5px;
+      </css-doodle>
     </div>
-    <pre class="box-source" textarea code live>
+    <pre class="box-source" textarea code>
       :doodle {
         @grid: 5 / 40vmin;
       }

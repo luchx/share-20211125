@@ -402,20 +402,28 @@
             <pre>
               <code class="hljs js">
     // CSSOM
-    // 手动拼接字符串和各种奇怪错误的日子已经结束了！
-    // document.body.style.opacity += 0.1 // 0.1 => 0.10.1
-    var width = 100;
-    document.body.style.width = width + 'px';
+    document.body.style.width = '100px';
 
     // Typed OM
+    // CSS.px(100) => new CSSUnitValue(100, 'px');
     document.body.attributeStyleMap.set('width', '100px');
-    // OR
-    document.body.attributeStyleMap.set('width', CSS.px(100));
-    // document.body.attributeStyleMap.get('width');
+    // document.body.attributeStyleMap.get('width'); // CSSUnitValue {value: 100, unit: 'px'}
     // document.body.attributeStyleMap.delete('width');
     // document.body.attributeStyleMap.clear();
+
+    // 手动拼接字符串和各种奇怪错误的日子已经结束了！
+    // var opacity = document.body.style.opacity; // '0.1'
+    // document.body.style.opacity = opacity + 0.2 // 0.1 => 0.10.2
+
+    // var opacity = document.body.attributeStyleMap.get('opacity').value; // 0.1
+    document.body.attributeStyleMap.set('opacity', opacity + 0.2)
+    // 又或者实现 calc(1em + 5px * 2)
+    new CSSMathSum(CSS.em(1), CSSMathProduct(CSS.px(5), 2))
               </code>
             </pre>
+            <p class="text-center text-base">
+              更多方法请查看： <a href="https://drafts.css-houdini.org/css-typed-om">https://drafts.css-houdini.org/css-typed-om</a>
+            </p>
           </section>
           <section>
             <h3 style="text-transform: unset">Properties & Values API</h3>
@@ -426,18 +434,21 @@
               <code class="hljs js">
     /**
      * name ：css 变量名
-     * syntax ：css type 类型，全部可取值见 CSS data types 下的 Properties
+     * syntax ：css type 类型，更多类型见：https://drafts.css-houdini.org/css-properties-values-api/#supported-names
      * inherits ：是否可继承
      * initialValue ：变量的初始值
     */
     window.CSS.registerProperty({
-      name: '--my-color',
+      name: '--demo-color',
       syntax: '&ltcolor&gt',
       inherits: false,
-      initialValue: '#000',
+      initialValue: '#ff0000',
     });
               </code>
             </pre>
+            <p class="text-center text-base">
+              更多方法请查看： <a href="https://drafts.css-houdini.org/css-properties-values-api">https://drafts.css-houdini.org/css-properties-values-api</a>
+            </p>
           </section>
           <section>
             <h3 style="text-transform: unset">CSS Parser API</h3>
@@ -472,6 +483,9 @@
           </section>
           <section>
             <h3 style="text-transform: unset">Worklets实战</h3>
+            <p class="text-left text-2xl">
+              Worklets 的概念和 web worker 类似，它们允许你引入脚本文件并执行特定的 JS 代码，这样的 JS 代码要满足两个条件：第一，可以在渲染流程中调用；第二，和主线程独立。
+            </p>
           </section>
           <section data-background-color="#ffffff" :data-background-image="require('@/assets/images/hudini-ready.png')" data-background-size="contain">
             <a href="https://ishoudinireadyyet.com" target="_blank" style="position: fixed; top: 0; display: block;width: 100%; height: 100px; color:#f00"></a>
