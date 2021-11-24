@@ -59,7 +59,7 @@
             <ul class="text-2xl">
               <li>css modules：通过 webpack 的 css-loader 中启用 css modules</li>
               <li>css in js：引入 styled-components 插件</li>
-              <li>js in css：css hudini</li>
+              <li>js in css：css houdini</li>
             </ul>
             </div>
           </section>
@@ -373,11 +373,11 @@
             <h3 style="text-transform: unset">CSS Houdini</h3>
           </section>
           <section>
-            <img src="@/assets/images/hudini.png" />
+            <img src="@/assets/images/houdini.png" />
             <p class="text-base">图片来源: https://www.w3cplus.com/css/css-houdini.html</p>
           </section>
           <section>
-            <img src="@/assets/images/hudini-api.png" />
+            <img src="@/assets/images/houdini-api.png" />
           </section>
           <section>
             <h3 style="text-transform: unset">Houdini APIs</h3>
@@ -487,7 +487,7 @@
               Worklets 的概念和 web worker 类似，它们允许你引入脚本文件并执行特定的 JS 代码，这样的 JS 代码要满足两个条件：第一，可以在渲染流程中调用；第二，和主线程独立。
             </p>
           </section>
-          <section data-background-color="#ffffff" :data-background-image="require('@/assets/images/hudini-ready.png')" data-background-size="contain">
+          <section data-background-color="#ffffff" :data-background-image="require('@/assets/images/houdini-ready.png')" data-background-size="contain">
             <a href="https://ishoudinireadyyet.com" target="_blank" style="position: fixed; top: 0; display: block;width: 100%; height: 100px; color:#f00"></a>
           </section>
         </section>
@@ -518,10 +518,11 @@
 </template>
 
 <script>
+import '@/utils/slide';
 import reveal from "reveal.js";
-import revealmarkdown from "reveal.js/plugin/markdown/markdown.esm";
-import revealhighlight from "reveal.js/plugin/highlight/highlight.esm.js";
-import revealnotes from "reveal.js/plugin/notes/notes.esm.js";
+import revealMarkdown from "reveal.js/plugin/markdown/markdown.esm";
+import revealHighlight from "reveal.js/plugin/highlight/highlight.esm.js";
+import revealNotes from "reveal.js/plugin/notes/notes.esm.js";
 
 export default {
   name: "app",
@@ -531,7 +532,7 @@ export default {
       controls: false,
       mousewheel: true,
       // learn about plugins: https://revealjs.com/plugins/
-      plugins: [revealmarkdown, revealhighlight, revealnotes],
+      plugins: [revealMarkdown, revealHighlight, revealNotes],
     });
   },
 };

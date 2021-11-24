@@ -18,10 +18,10 @@ CSS 作为前端三架马车之一，有着不可或缺的地位，也是 WEB �
 1. css 预处理器
 2. css 后处理器
 
-### 模块三、css 魔法（时长：20 分钟）
+### 模块三、css 魔法（时长：30 分钟）
 
 1. css-doodle
-2. css-hudini
+2. css-houdini
 
 ### 模块四、Q&A
 
