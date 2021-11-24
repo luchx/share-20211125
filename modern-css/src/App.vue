@@ -328,7 +328,7 @@
             <span>css 魔法</span>
           </h3>
           <p>
-            <small class="mt-40 text-gray-100">时长约 20 分钟</small>
+            <small class="mt-40 text-gray-100">时长约 30 分钟</small>
           </p>
         </section>
         <section>
