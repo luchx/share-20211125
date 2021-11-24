@@ -418,7 +418,7 @@
     // var opacity = document.body.attributeStyleMap.get('opacity').value; // 0.1
     document.body.attributeStyleMap.set('opacity', opacity + 0.2)
     // 又或者实现 calc(1em + 5px * 2)
-    new CSSMathSum(CSS.em(1), CSSMathProduct(CSS.px(5), 2))
+    new CSSMathSum(CSS.em(1), new CSSMathProduct(CSS.px(5), 2))
               </code>
             </pre>
             <p class="text-center text-base">
