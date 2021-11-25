@@ -512,6 +512,9 @@
             </ul>
           </div>
         </section>
+        <section>
+          <img src="@/assets/images/qrcode.jpg" style="display: block; height: 30vh;width:auto;margin: 0 auto" alt=""/>
+        </section>
       </div>
     </div>
   </div>
